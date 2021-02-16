@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import auth from './auth.js';
 
 function App() {
   return (
