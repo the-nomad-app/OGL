@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/mapsController");
+const axios = require("axios")
 
 // Matches with "/api/maps"
 router.route("/")
@@ -17,7 +18,7 @@ module.exports = router;
 
 
 // Trail API 
-import axios from "axios";
+
 
 const options = {
   method: 'GET',
