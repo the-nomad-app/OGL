@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
+// import Home from './components/pages/Home';
 import campsites from './components/pages/campsites';
 import travelservices from './components/pages/travelservices';
 import trails from './components/pages/trails';
@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          {/* <Route path='/' exact component={Home} /> */}
           <Route path='/campsites' component={campsites} />
           <Route path='/trails' component={trails} />
           <Route path='/travelservices' component={travelservices} />
