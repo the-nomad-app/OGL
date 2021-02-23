@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const booksController = require("../../controllers/mapsController");
+const mapsController = require("../../controllers/mapsController");
 const axios = require("axios")
 
 // Matches with "/api/maps"
