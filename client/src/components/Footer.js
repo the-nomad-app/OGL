@@ -14,16 +14,16 @@ function Footer() {
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
-          <div className='footer-logo'>
+          {/* <div className='footer-logo'>
             <Link to='/con' className='social-logo'>
               Contact me @
             </Link>
-          </div>
+          </div> */}
           <div className='social-icons'>
           {/* eslint-disable-next-line */}
             <a
               className='social-icon-link'
-              href=''
+              to='/pages/campsites'
               target='_blank'
               aria-label='Campsites'
             >
@@ -32,7 +32,7 @@ function Footer() {
             {/* eslint-disable-next-line */}
             <a
               className='social-icon-link'
-              href=""
+              to='/pages/trails'
               target='_blank'
               aria-label='Trails'
             >
@@ -41,7 +41,7 @@ function Footer() {
             {/* eslint-disable-next-line */}
             <a
               className='social-icon-link'
-              href=''
+              to='/pages/travelservices'
               target='_blank'
               aria-label='Travel Resources'
             >
