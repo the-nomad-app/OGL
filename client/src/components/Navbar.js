@@ -27,7 +27,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              Chance Ewell
+            NOM<i class='fab fa-think-peaks'/>D
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -35,34 +35,34 @@ function Navbar() {
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <li className='nav-item'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                  About Me
+                  Home
                 </Link>
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/portfolio'
+                  to='/pages/campsites'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Portfolio
+                  Campsites
                 </Link>
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/portfolio'
+                  to='/pages/trails'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Photography
+                  Trails
                 </Link>
               </li>
-              <li>
+              <li className='nav-item'>
                 <Link
-                  to='/sign-up'
-                  className='nav-links-mobile'
+                  to='/pages/travelservices'
+                  className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Sign Up
+                  Travel Services
                 </Link>
               </li>
             </ul>

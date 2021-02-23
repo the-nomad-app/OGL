@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
+import Home from './components/pages';
 import campsites from './components/pages/campsites';
 import travelservices from './components/pages/travelservices';
 import trails from './components/pages/trails';
