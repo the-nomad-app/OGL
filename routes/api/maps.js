@@ -19,12 +19,13 @@ module.exports = router;
 
 // Trail API 
 
-
+//Hiking Options URL 
 const options = {
   method: 'GET',
   url: 'https://trailapi-trailapi.p.rapidapi.com/trails/%7Bid%7D/maps/',
   headers: {
-    'x-rapidapi-key': '63c073738amsh9513eb30e5107aep11e052jsnb134aa9e2b17',
+    // put in the code as an example to hide our API Key that we choose to use. 
+    'x-rapidapi-key': process.env.HIKE_KEY,
     'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
     "useQueryString": true
   }
