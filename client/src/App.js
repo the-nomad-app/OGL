@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Home from './components/pages/home/home';
 import Campsites from './components/pages/campsites/campsites';
