@@ -16,20 +16,9 @@ router
 
 module.exports = router;
 
-
-// Trail API 
-
-//Hiking Options URL 
-const options = {
-  method: 'GET',
-  url: 'https://trailapi-trailapi.p.rapidapi.com/trails/%7Bid%7D/maps/',
-  headers: {
-    // put in the code as an example to hide our API Key that we choose to use. 
-    'x-rapidapi-key': process.env.HIKE_KEY,
-    'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
-    "useQueryString": true
-  }
-};
+// put in the code as an example to hide our API Key that we choose to use. 
+// process.env.HIKE_KEY,
+   
 
 axios.request(options).then(function (response) {
 	console.log(response.data);
