@@ -14,47 +14,38 @@ function Footer() {
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
-          <div className='footer-logo'>
+          {/* <div className='footer-logo'>
             <Link to='/con' className='social-logo'>
               Contact me @
             </Link>
-          </div>
+          </div> */}
           <div className='social-icons'>
           {/* eslint-disable-next-line */}
             <a
-              className='social-icon-link GitHub'
-              href='https://github.com/CHANCEEWELL?tab=repositories'
+              className='social-icon-link'
+              to='/pages/campsites'
               target='_blank'
-              aria-label='GitHub'
+              aria-label='Campsites'
             >
-              <i className="fab fa-github" />
-            </a>
-            {/* eslint-disable-next-line */}
-            <a
-              className='social-icon-link LinkedIn'
-              href="https://www.facebook.com/chance.ewell"
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </a>
-            {/* eslint-disable-next-line */}
-            <a
-              className='social-icon-link facebook'
-              href='https://www.facebook.com/chance.ewell'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i className='fab fa-facebook-f' />
+              <i className="fab fa-campground" />
             </a>
             {/* eslint-disable-next-line */}
             <a
               className='social-icon-link'
-              href='https://drive.google.com/file/d/1k_CJnnWg9ZiBCTeoam6g3HG59ySD--Ij/view?usp=drivesdk'
+              to='/pages/trails'
               target='_blank'
-              aria-label='Resume'
+              aria-label='Trails'
             >
-              <i className="far fa-file" />
+              <i className='fab fa-Hiking' />
+            </a>
+            {/* eslint-disable-next-line */}
+            <a
+              className='social-icon-link'
+              to='/pages/travelservices'
+              target='_blank'
+              aria-label='Travel Resources'
+            >
+              <i className="far fa-toolbox" />
             </a>
           </div>
         </div>

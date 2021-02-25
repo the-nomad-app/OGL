@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const options = {
   method: 'GET',
   url: 'https://trailapi-trailapi.p.rapidapi.com/',
@@ -13,7 +14,7 @@ const options = {
     limit: '25'
   },
   headers: {
-    'x-rapidapi-key': '31741db822mshc8c3aa2d28768c1p15c3fbjsnb10c43f0aa7d',
+    'x-rapidapi-key': '63c073738amsh9513eb30e5107aep11e052jsnb134aa9e2b17',
     'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com'
   }
 };

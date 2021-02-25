@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const booksController = require("../../controllers/mapsController");
+const mapsController = require("../../controllers/mapsController");
 const axios = require("axios")
 
 // Matches with "/api/maps"
@@ -19,13 +19,15 @@ module.exports = router;
 
 // Trail API 
 
-
+//Hiking Options URL 
 const options = {
   method: 'GET',
   url: 'https://trailapi-trailapi.p.rapidapi.com/trails/%7Bid%7D/maps/',
   headers: {
-    'x-rapidapi-key': '31741db822mshc8c3aa2d28768c1p15c3fbjsnb10c43f0aa7d',
-    'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com'
+    // put in the code as an example to hide our API Key that we choose to use. 
+    'x-rapidapi-key': process.env.HIKE_KEY,
+    'x-rapidapi-host': 'trailapi-trailapi.p.rapidapi.com',
+    "useQueryString": true
   }
 };
 
