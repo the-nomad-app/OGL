@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages';
-import campsites from './components/pages/campsites';
-import travelservices from './components/pages/travelservices';
-import trails from './components/pages/trails';
+import Home from './components/pages/home/home';
+import Campsites from './components/pages/campsites/campsites';
+import TravelServices from './components/pages/travelservices/travelservices';
+import Trails from './components/pages/trails/trails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/campsites' component={campsites} />
-          <Route path='/trails' component={trails} />
-          <Route path='/travelservices' component={travelservices} />
+          <Route path='/campsites' component={Campsites} />
+          <Route path='/trails' component={Trails} />
+          <Route path='/travelservices' component={TravelServices} />
         </Switch>
       </Router>
     </>
