@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import API from "../../../utils/API";
 
 function TravelServices() {
-  const [searchLocation, setSearchLocation] = useState();
 
   function setLocation() {
     var location = document.querySelector(".search").value;
-    setSearchLocation(location);
+    API.geocode(location)
+       .then((res) => {
+           var lat = res.data.items[0].position.lat;
+           var long = res.data.items[0].position.lng;
+       });
   }
 
   return (
