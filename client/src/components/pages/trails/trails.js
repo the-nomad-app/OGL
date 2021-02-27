@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../App.css';
+import './trails.css';
 
 function Trails() {
   return (

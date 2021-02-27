@@ -10,7 +10,6 @@ const bodyParser = require('body-parser')
 const Pusher = require('pusher');
 
 // create a express application
-const app = express();
 
 // initialize pusher
 const pusher = new Pusher({
