@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.home {
+  background-image: url('/src/images/Perfect.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
