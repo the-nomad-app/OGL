@@ -8,10 +8,10 @@ function TravelServices() {
   function setLocation() {
     var location = document.querySelector(".search").value;
     API.geocode(location)
-       .then((res) => {
-           var lat = res.data.items[0].position.lat;
-           var long = res.data.items[0].position.lng;
-       });
+      .then((res) => {
+        var lat = res.data.items[0].position.lat;
+        var long = res.data.items[0].position.lng;
+      });
   }
 
   return (

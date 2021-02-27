@@ -6,12 +6,6 @@ import Campsites from './components/pages/campsites/campsites';
 import TravelServices from './components/pages/travelservices/travelservices';
 import Trails from './components/pages/trails/trails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
-
-
-
-
-
 import GoogleMap from 'google-map-react';
 import axios from 'axios';
 import Pusher from 'pusher-js';
@@ -137,18 +131,16 @@ class App extends Component {
     });
 
     return (
-      <div >
-
-<Router>
-        <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/campsites' component={Campsites} />
-          <Route path='/trails' component={Trails} />
-          <Route path='/travelservices' component={TravelServices} />
-        </Switch>
-      </Router>
-
+      <div>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/campsites' component={Campsites} />
+            <Route path='/trails' component={Trails} />
+            <Route path='/travelservices' component={TravelServices} />
+          </Switch>
+        </Router>
 
         <GoogleMap
           style={mapStyles}
@@ -164,11 +156,10 @@ class App extends Component {
 
 }
 
-
 // function App() {
 //   return (
 //     <>
-//        <Router>
+//      <Router>
 //        <Navbar />
 //        <Switch>
 //          <Route path='/' exact component={Home} />
@@ -176,7 +167,7 @@ class App extends Component {
 //          <Route path='/trails' component={Trails} />
 //          <Route path='/travelservices' component={TravelServices} />
 //        </Switch>
-//        </Router>
+//      </Router>
 //     </>
 //   );
 // }
