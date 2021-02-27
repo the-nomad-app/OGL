@@ -1,5 +1,6 @@
 import React from "react";
 import '../../../App.css';
+import './campsites.css';
 
 function Campsites() {
   return (
