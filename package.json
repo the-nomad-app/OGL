@@ -24,16 +24,9 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^4.6.0",
     "express": "^4.16.3",
-    "google-map-react": "^2.1.9",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "pusher": "^5.0.0",
-    "pusher-js": "^7.0.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-native-maps": "0.27.1",
-    "react-scripts": "^4.0.3",
-    "react-toastify": "^7.0.3",
-    "web-vitals": "^1.1.0"
+    "pusher-js": "^7.0.3"
   }
 }
