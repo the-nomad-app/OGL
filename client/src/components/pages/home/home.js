@@ -1,6 +1,7 @@
 import React from "react";
 import '../../../App.css';
 import './home.css';
+import './HeroSection.css';
 // import HeroSection from '../../HeroSection';
 // import Footer from '../../Footer';
 
