@@ -1,7 +1,7 @@
 
 
 .hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+  background: url('/images/nomad1.jpg') center center/cover no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .hero-container > h1 {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 100px;
   margin-top: -100px;
 }
