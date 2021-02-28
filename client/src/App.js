@@ -153,7 +153,6 @@ class App extends Component {
       </div>
     )
   }
-
 }
 
 // function App() {

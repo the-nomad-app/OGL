@@ -1,8 +1,8 @@
 import React from 'react';
-import '../App.css';
+import '../../App.css';
 // import { Button } from './Button';
 import './HeroSection.css';
-import './images/profile.jpeg/'
+// import './images/profile.jpeg/'
 function HeroSection() {
   return (
     <div className='hero-container'>

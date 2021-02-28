@@ -1,6 +1,17 @@
 import React from "react";
 import '../../../App.css';
 import './campsites.css';
+// import Cards from '../Cards';
+// import Footer from '../Footer';
+
+// export default function Portfolio() {
+//   return (
+//   <>
+//     <Cards/>
+//     <Footer />
+//   </>
+//   );
+// }
 
 function Campsites() {
   return (
