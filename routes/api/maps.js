@@ -18,10 +18,9 @@ module.exports = router;
 
 // put in the code as an example to hide our API Key that we choose to use. 
 // process.env.HIKE_KEY,
-   
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
+// axios.request(options).then(function (response) {
+// 	console.log(response.data);
+// }).catch(function (error) {
+// 	console.error(error);
+// });

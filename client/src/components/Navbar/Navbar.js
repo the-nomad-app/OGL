@@ -27,7 +27,7 @@ function Navbar() {
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            NOM<i class='fab fa-think-peaks'/>D
+            NOM<i className='fab fa-think-peaks'/>D
             </Link>
             <div className='menu-icon' onClick={handleClick}>
               <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,7 +40,7 @@ function Navbar() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/pages/campsites'
+                  to='/campsites'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
@@ -49,7 +49,7 @@ function Navbar() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/pages/trails'
+                  to='/trails'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
@@ -58,7 +58,7 @@ function Navbar() {
               </li>
               <li className='nav-item'>
                 <Link
-                  to='/pages/travelservices'
+                  to='/travelservices'
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
