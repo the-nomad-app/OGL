@@ -2,7 +2,8 @@ import React from 'react';
 import '../App.css';
 // import { Button } from './Button';
 import './HomeSection.css';
-import './images/profile.jpeg/'
+import './images/profile.jpeg/';
+
 function HomeSection() {
   return (
     <div className='home-container'>
