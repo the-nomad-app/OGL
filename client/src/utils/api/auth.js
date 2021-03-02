@@ -7,7 +7,7 @@ function login(username, password) {
       password,
     })
     .then((res) => {
-      setAuth(res.data.token);
+      setAuth({ token: res.data.token });
       return res.data.token;
     });
 }
