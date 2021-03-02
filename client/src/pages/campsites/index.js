@@ -1,6 +1,6 @@
 import React from "react";
-import '../../../App.css';
-import './trails.css';
+
+import './campsites.css';
 // import Cards from '../Cards';
 // import Footer from '../Footer';
 
@@ -13,14 +13,14 @@ import './trails.css';
 //   );
 // }
 
-function Trails() {
+export function Campsites() {
   return (
     <div>
-      <h1>Trails</h1>
+      <h1>Campsites</h1>
       <hr></hr>
-      <p>Trail stuff goes here.</p>
+      <p>Campsite stuff goes here.</p>
     </div>
   );
 }
 
-export default Trails;
+

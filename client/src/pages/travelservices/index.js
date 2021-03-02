@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import API from "../../../utils/API";
-import '../../../App.css';
+import API from "../../utils/geocode";
+
 import './travelservices.css';
 // import Cards from '../Cards';
 // import Footer from '../Footer';
@@ -14,7 +14,7 @@ import './travelservices.css';
 //   );
 // }
 
-function TravelServices() {
+export function TravelServices() {
 
   function setLocation() {
     var location = document.querySelector(".search").value;
@@ -37,4 +37,3 @@ function TravelServices() {
   );
 }
 
-export default TravelServices;

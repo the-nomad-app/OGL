@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
-import Home from './components/pages/home/home';
-import Campsites from './components/pages/campsites/campsites';
-import TravelServices from './components/pages/travelservices/travelservices';
-import Trails from './components/pages/trails/trails';
+
+import { Home, Campsites, TravelServices, Trails, Login, Register}from './pages';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
 // import GoogleMap from 'google-map-react';
 // import axios from 'axios';
 // import Pusher from 'pusher-js';
@@ -165,6 +166,8 @@ function App() {
          <Route path='/campsites' component={Campsites} />
          <Route path='/trails' component={Trails} />
          <Route path='/travelservices' component={TravelServices} />
+         <Route path='/login' component={Login} />
+         <Route path='/register' component={Register} />
        </Switch>
      </Router>
     </>

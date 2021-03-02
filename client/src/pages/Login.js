@@ -10,7 +10,7 @@ import {
   Label,
   Input,
   Button,
-} from "../components";
+} from "../components/Login";
 
 export function Login() {
   const [state, setState] = useState({
@@ -21,11 +21,7 @@ export function Login() {
   const { auth, setAuth } = useAuth();
   const history = useHistory();
 
-  useEffect(() => {
-    if (auth) {
-      history.push("/profile");
-    }
-  }, []);
+
 
   function _handleChange(event) {
     const { name, value } = event.target;
@@ -41,7 +37,7 @@ export function Login() {
       .then((token) => {
         setAuth({ ...auth, token });
         setTimeout(() => {
-          history.push("/profile");
+          history.push("/");
         })
       })
       .catch((err) => {
