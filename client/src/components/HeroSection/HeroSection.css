@@ -1,7 +1,5 @@
-
-
-.hero-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
+/* .home-container {
+  background: url('/images/img-home.jpg') center center/cover no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -12,13 +10,13 @@
   object-fit: contain;
 }
 
-.hero-container > h1 {
+.home-container > h1 {
   color: #fff;
   font-size: 100px;
   margin-top: -100px;
 }
 
-.hero-container > p {
+.home-container > p {
   margin-top: 8px;
   color: #fff;
   font-size: 32px;
@@ -30,11 +28,11 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
 }
 
-.hero-btns {
+.home-btns {
   margin-top: 32px;
 }
 
-.hero-btns .btn {
+.home-btns .btn {
   margin: 6px;
 }
 
@@ -43,19 +41,19 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
+  .home-container > h1 {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hero-container > h1 {
+  .home-container > h1 {
     font-size: 50px;
     margin-top: -100px;
   }
 
-  .hero-container > p {
+  .home-container > p {
     font-size: 30px;
   }
 
@@ -67,4 +65,4 @@ font-family: 'Source Sans Pro', sans-serif;
   .btn {
     width: 100%;
   }
-}
+} */

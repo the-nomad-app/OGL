@@ -12,24 +12,24 @@ import Pusher from 'pusher-js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const mapStyles = {
-  width: '100%',
-  height: '100%'
-}
-const markerStyle = {
-  height: '50px',
-  width: '50px',
-  marginTop: '-50px'
-}
-const imgStyle = {
-  height: '100%'
-}
-const Marker = ({ title }) => (
-  <div style={markerStyle}>
-    <img style={imgStyle} src="https://res.cloudinary.com/og-tech/image/upload/s--OpSJXuvZ--/v1545236805/map-marker_hfipes.png" alt={title} />
-    <h3>{title}</h3>
-  </div>
-);
+// const mapStyles = {
+//   width: '100%',
+//   height: '100%'
+// }
+// const markerStyle = {
+//   height: '50px',
+//   width: '50px',
+//   marginTop: '-50px'
+// }
+// const imgStyle = {
+//   height: '100%'
+// }
+// const Marker = ({ title }) => (
+//   <div style={markerStyle}>
+//     <img style={imgStyle} src="https://res.cloudinary.com/og-tech/image/upload/s--OpSJXuvZ--/v1545236805/map-marker_hfipes.png" alt={title} />
+//     <h3>{title}</h3>
+//   </div>
+// );
 class App extends Component {
 
   constructor(props) {
@@ -118,17 +118,17 @@ class App extends Component {
   }
 
   render() {
-    let locationMarkers = Object.keys(this.state.locations).map((username, id) => {
-      return (
-        <Marker
-          key={id}
-          title={`${username === this.state.current_user ? 'My location' : username + "'s location"}`}
-          lat={this.state.locations[`${username}`].lat}
-          lng={this.state.locations[`${username}`].lng}
-        >
-        </Marker>
-      );
-    });
+    // let locationMarkers = Object.keys(this.state.locations).map((username, id) => {
+    //   return (
+    //     <Marker
+    //       key={id}
+    //       title={`${username === this.state.current_user ? 'My location' : username + "'s location"}`}
+    //       lat={this.state.locations[`${username}`].lat}
+    //       lng={this.state.locations[`${username}`].lng}
+    //     >
+    //     </Marker>
+    //   );
+    // });
 
     return (
       <div>
@@ -136,20 +136,20 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route path='/' exact component={Home} />
-            <Route path='/campsites' component={Campsites} />
+            <Route path='/campsites' render={(props)=> <Campsites locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props}/>} />
             <Route path='/trails' component={Trails} />
             <Route path='/travelservices' component={TravelServices} />
           </Switch>
         </Router>
 
-        <GoogleMap
+        {/* <GoogleMap
           style={mapStyles}
           bootstrapURLKeys={{ key: 'AIzaSyAP93BAoflNBnB8aYrKvbJ8CwCCMRSa4fA' }}
           center={this.state.center}
           zoom={14}
         >
           {locationMarkers}
-        </GoogleMap>
+        </GoogleMap> */}
       </div>
     )
   }

@@ -2,10 +2,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const bodyParser = require('body-parser')
 const Pusher = require('pusher');
+
 
 // initialize pusher
 const pusher = new Pusher({
@@ -22,7 +24,7 @@ pusher.trigger("my-channel", "my-event", {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// to Allow CORS
+app.use(cors());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header(

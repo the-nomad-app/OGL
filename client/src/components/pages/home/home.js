@@ -1,6 +1,7 @@
 import React from "react";
-import '../../../App.css';
 import './home.css';
+
+// import '../../../App.css';
 // import HeroSection from '../../HeroSection';
 // import Footer from '../../Footer';
 
@@ -13,17 +14,13 @@ import './home.css';
 //   );
 // }
 
-
-
-
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
-      <hr></hr>
-      <p>Home stuff goes here.</p>
-    </div>
-  );
-}
+          <div className='home-container'>
+          <h1>Welcome to <strong>NOMAD!</strong></h1>
+          <embed type="image/jpg" src="./images/Pathway.jpg" width="100%" height="100%"></embed>
+        </div>
+      );
+    }
 
 export default Home;
