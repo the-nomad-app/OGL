@@ -2,21 +2,10 @@ import React from "react";
 import '../../../App.css';
 import './trails.css';
 import GoogleMap from 'google-map-react';
-import axios from 'axios';
-import Pusher from 'pusher-js';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-// import Cards from '../Cards';
-// import Footer from '../Footer';
-
-// export default function Portfolio() {
-//   return (
-//   <>
-//     <Cards/>
-//     <Footer />
-//   </>
-//   );
-// }
+// import axios from 'axios';
+// import Pusher from 'pusher-js';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 // function Trails() {
 //   return (
@@ -73,7 +62,6 @@ return (
   {locationMarkers}
 </GoogleMap>
 
-)
-}    
+)}    
 
 export default Trails;
