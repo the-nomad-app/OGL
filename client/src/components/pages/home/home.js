@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import '../../../App.css';
 
 function Home() {
   const backgroundImgs = [ "./images/Pathway.jpg", "./images/arizonaRocks.jpg", "./images/Perfect.jpg" ]

@@ -6,7 +6,7 @@ import Campsites from './components/pages/campsites/campsites';
 import TravelServices from './components/pages/travelservices/travelservices';
 import Trails from './components/pages/trails/trails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import GoogleMap from 'google-map-react';
+// import GoogleMap from 'google-map-react';
 import axios from 'axios';
 import Pusher from 'pusher-js';
 import { ToastContainer, toast } from 'react-toastify';
