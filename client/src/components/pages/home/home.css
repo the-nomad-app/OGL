@@ -1,30 +1,22 @@
-/* .home {
-    background-image: url('/src/images/Perfect.jpg');
-    background-position: center;
-    background-size: fill;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-size: 100px;
-  } */
-
-  
-
 .home-container {
   /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
   height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 250vh;
+  margin: -100000;
+  display: center;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1000px black;;
   object-fit: contain;
 }
 
 .home-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: flex;
+  margin-top: 20vh;
+  z-index: 100;
+  text-align: center;
 }
 
 .home-container > p {
