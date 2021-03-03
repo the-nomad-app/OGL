@@ -135,10 +135,10 @@ class App extends Component {
         <Router>
           <Navbar />
           <Switch>
+            <Route path='/campsites' render={(props)=> <Campsites locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
+            <Route path='/trails' render={(props)=> <Trails locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
+            <Route path='/travelservices' render={(props)=> <TravelServices locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/' exact component={Home} />
-            <Route path='/campsites' render={(props)=> <Campsites locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props}/>} />
-            <Route path='/trails' component={Trails} />
-            <Route path='/travelservices' component={TravelServices} />
           </Switch>
         </Router>
 
