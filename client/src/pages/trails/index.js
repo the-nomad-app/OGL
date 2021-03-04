@@ -63,4 +63,4 @@ return (
 
 )}    
 
-export default Trails;
+export {Trails};

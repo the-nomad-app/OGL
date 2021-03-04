@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import API from "../../utils/geocode";
 
 // import API from "../../../utils/API";
-import '../../../App.css';
+
 import './travelservices.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
@@ -55,96 +55,6 @@ return (
 
 )}    
 
-export default TravelServices;
+export  {TravelServices};
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Cards from '../Cards';
-// import Footer from '../Footer';
-
-// export default function Portfolio() {
-//   return (
-//   <>
-//     <Cards/>
-//     <Footer />
-//   </>
-//   );
-// }
-
-<<<<<<< HEAD:client/src/pages/travelservices/index.js
-export function TravelServices() {
-
-  function setLocation() {
-    var location = document.querySelector(".search").value;
-    API.geocode(location)
-      .then((res) => {
-        var lat = res.data.items[0].position.lat;
-        var long = res.data.items[0].position.lng;
-      });
-  }
-
-  return (
-    <div>
-      <h1>Travel Services</h1>
-      <h5>Search for travel services here.</h5>
-      <input className="search" placeholder="Search Location"></input>
-      <button onClick={setLocation}>Search</button>
-      <hr></hr>
-      <p>Travel Services stuff goes here.</p>
-    </div>
-  );
-}
-
-=======
-// function TravelServices() {
-
-//   function setLocation() {
-//     var location = document.querySelector(".search").value;
-//     API.geocode(location)
-//       .then((res) => {
-//         var lat = res.data.items[0].position.lat;
-//         var long = res.data.items[0].position.lng;
-//       });
-//   }
-
-//   return (
-//     <div>
-//       <h1>Travel Services</h1>
-//       <h5>Search for travel services here.</h5>
-//       <input className="search" placeholder="Search Location"></input>
-//       <button onClick={setLocation}>Search</button>
-//       <hr></hr>
-//       <p>Travel Services stuff goes here.</p>
-//     </div>
-//   );
-// }
-
-// export default TravelServices;
->>>>>>> 53d283d0f21f487506d4f3694d55cfd5c94b0096:client/src/components/pages/travelservices/travelservices.js

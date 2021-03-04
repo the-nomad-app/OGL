@@ -7,21 +7,22 @@ import GoogleMap from 'google-map-react';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 
-// export default function Portfolio() {
-//   return (
-//   <>
-//     <Cards/>
-//     <Footer />
-//   </>
-//   );
-// }
-
-export function Campsites() {
-  return (
-    <div>
-      <h1>Campsites</h1>
-      <hr></hr>
-      <p>Campsite stuff goes here.</p>
+const mapStyles = {
+    width: '100%',
+    height: '100%'
+  }
+  const markerStyle = {
+    height: '50px',
+    width: '50px',
+    marginTop: '-50px'
+  }
+  const imgStyle = {
+    height: '100%'
+  }
+  const Marker = ({ title }) => (
+    <div style={markerStyle}>
+      <img style={imgStyle} src="https://res.cloudinary.com/og-tech/image/upload/s--OpSJXuvZ--/v1545236805/map-marker_hfipes.png" alt={title} />
+      <h3>{title}</h3>
     </div>
   );
 
@@ -51,4 +52,4 @@ return (
 
 )}    
 
-
+export  {Campsites};
