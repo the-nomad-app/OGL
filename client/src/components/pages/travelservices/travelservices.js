@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import API from "../../../utils/API";
+import React from "react";
+// import API from "../../../utils/API";
 import '../../../App.css';
 import './travelservices.css';
 import GoogleMap from 'google-map-react';
-import axios from 'axios';
-import Pusher from 'pusher-js';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import axios from 'axios';
+// import Pusher from 'pusher-js';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const mapStyles = {
   width: '100%',
@@ -51,8 +51,7 @@ return (
   {locationMarkers}
 </GoogleMap>
 
-)
-}    
+)}    
 
 export default TravelServices;
 

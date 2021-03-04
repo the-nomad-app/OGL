@@ -1,4 +1,4 @@
-.cards {
+/* .cards {
   padding: 4rem;
   background: #fff;
 }
@@ -8,7 +8,6 @@ h1 {
   size: 10px;
 }
 .portfolio-container {
-  /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
   height: 100vh;
   width: 100%;
   display: flex;
@@ -127,4 +126,4 @@ h1 {
   .cards__item {
     margin-bottom: 2rem;
   }
-}
+} */
