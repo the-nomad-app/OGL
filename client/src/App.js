@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import './App.css';
 
-import { Home, Campsites, TravelServices, Trails, Login, Register}from './pages';
+import { Home, Campsites, TravelServices, Trails, Login, Register} from './pages';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import GoogleMap from 'google-map-react';
@@ -138,7 +138,7 @@ class App extends Component {
             <Route path='/campsites' render={(props)=> <Campsites locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/trails' render={(props)=> <Trails locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/travelservices' render={(props)=> <TravelServices locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
-            <Route path='/' exact component={Home} />
+            <Route exact path='/' component={Home} />
             <Route path='/login' component={Login} />
             <Route path='/register' component={Register} />
           </Switch>

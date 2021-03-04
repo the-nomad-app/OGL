@@ -12,7 +12,7 @@ import {
   Button,
 } from "../components/Login";
 
-export function Login() {
+export default function Login() {
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -48,12 +48,12 @@ export function Login() {
 
   return (
     <Container className="mt-5">
-      <Row>
+      <Row className="login-row">
         <Column className="col-md-6 offset-md-3">
           <h1 className="mb-4">Login</h1>
           <form onSubmit={_handleSubmit}>
-            <FormGroup>
-              <Label>Email</Label>
+            <FormGroup className="form-group-email">
+              <Label>User Name: </Label>
               <Input
                 type="text"
                 name="username"
@@ -61,8 +61,8 @@ export function Login() {
                 onChange={_handleChange}
               />
             </FormGroup>
-            <FormGroup>
-              <Label>Password</Label>
+            <FormGroup className="form-group-password">
+              <Label>Password: </Label>
               <Input
                 type="password"
                 name="password"
@@ -70,8 +70,8 @@ export function Login() {
                 onChange={_handleChange}
               />
             </FormGroup>
-            <FormGroup className="text-right">
-              <Button className="btn-primary">Submit</Button>
+            <FormGroup className="form-group-submit">
+              <Button className="btn">Submit</Button>
             </FormGroup>
           </form>
         </Column>
@@ -79,3 +79,5 @@ export function Login() {
     </Container>
   );
 }
+
+export { Login }

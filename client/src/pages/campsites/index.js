@@ -1,5 +1,4 @@
 import React from "react";
-
 import './campsites.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
@@ -52,4 +51,4 @@ return (
 
 )}    
 
-export  {Campsites};
+export { Campsites };
