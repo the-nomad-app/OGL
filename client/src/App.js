@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import './App.css';
 import Home from './components/pages/home/home';
 import Campsites from './components/pages/campsites/campsites';
@@ -140,6 +141,7 @@ class App extends Component {
             <Route path='/travelservices' render={(props)=> <TravelServices locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/' exact component={Home} />
           </Switch>
+          <Footer />
         </Router>
 
         {/* <GoogleMap
