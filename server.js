@@ -1,7 +1,9 @@
 // create a express application
 const express = require("express");
 const mongoose = require("mongoose");
+const config = require("./config/database");
 const routes = require("./routes");
+const { User } = require("./models");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const cors = require("cors");
