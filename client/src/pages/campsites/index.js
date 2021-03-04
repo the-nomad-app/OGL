@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../App.css';
+
 import './campsites.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
@@ -52,4 +52,4 @@ return (
 
 )}    
 
-export default Campsites;
+export  {Campsites};

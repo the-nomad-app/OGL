@@ -1,12 +1,22 @@
 import React from "react";
-// import API from "../../../utils/API";
-import '../../../App.css';
-import './travelservices.css';
+import './trails.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
 // import Pusher from 'pusher-js';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
+
+// function Trails() {
+//   return (
+//     <div>
+//       <h1>Trails</h1>
+//       <hr></hr>
+//       <p>Trail stuff goes here.</p>
+//     </div>
+//   );
+// }
+
+// export default Trails;
 
 const mapStyles = {
   width: '100%',
@@ -27,7 +37,7 @@ const Marker = ({ title }) => (
   </div>
 );
 
-function TravelServices(props) {
+function Trails(props) {
   console.log(props)
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
       return (
@@ -53,70 +63,4 @@ return (
 
 )}    
 
-export default TravelServices;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Cards from '../Cards';
-// import Footer from '../Footer';
-
-// export default function Portfolio() {
-//   return (
-//   <>
-//     <Cards/>
-//     <Footer />
-//   </>
-//   );
-// }
-
-// function TravelServices() {
-
-//   function setLocation() {
-//     var location = document.querySelector(".search").value;
-//     API.geocode(location)
-//       .then((res) => {
-//         var lat = res.data.items[0].position.lat;
-//         var long = res.data.items[0].position.lng;
-//       });
-//   }
-
-//   return (
-//     <div>
-//       <h1>Travel Services</h1>
-//       <h5>Search for travel services here.</h5>
-//       <input className="search" placeholder="Search Location"></input>
-//       <button onClick={setLocation}>Search</button>
-//       <hr></hr>
-//       <p>Travel Services stuff goes here.</p>
-//     </div>
-//   );
-// }
-
-// export default TravelServices;
+export {Trails};

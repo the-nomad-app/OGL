@@ -1,6 +1,9 @@
 import React from "react";
-import './home.css';
-import '../../../App.css';
+
+
+
+
+
 
 function Home() {
   const backgroundImgs = [ "./images/flatheadLake.jpg", "./images/hotSprings.jpg", "./images/theRonaArch.jpg", "./images/redFleet.jpg", "./images/mermaidPose.jpg", "./images/saltFlats.jpg",  ]
@@ -10,5 +13,4 @@ function Home() {
         </div>
       );
     }
-
-export default Home;
+export {Home};

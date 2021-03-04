@@ -1,23 +1,14 @@
-import React from "react";
-import '../../../App.css';
-import './trails.css';
+import React, { useState } from "react";
+import API from "../../utils/geocode";
+
+// import API from "../../../utils/API";
+
+import './travelservices.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
 // import Pusher from 'pusher-js';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
-
-// function Trails() {
-//   return (
-//     <div>
-//       <h1>Trails</h1>
-//       <hr></hr>
-//       <p>Trail stuff goes here.</p>
-//     </div>
-//   );
-// }
-
-// export default Trails;
 
 const mapStyles = {
   width: '100%',
@@ -38,7 +29,7 @@ const Marker = ({ title }) => (
   </div>
 );
 
-function Trails(props) {
+function TravelServices(props) {
   console.log(props)
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
       return (
@@ -64,4 +55,6 @@ return (
 
 )}    
 
-export default Trails;
+export  {TravelServices};
+
+
