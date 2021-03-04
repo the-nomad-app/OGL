@@ -1,12 +1,7 @@
-<<<<<<< HEAD
+/* 
 
-
-.hero-container {
-  background: url('/images/nomad1.jpg') center center/cover no-repeat;
-=======
-/* .home-container {
+.home-container {
   background: url('/images/img-home.jpg') center center/cover no-repeat;
->>>>>>> 53d283d0f21f487506d4f3694d55cfd5c94b0096
   height: 100vh;
   width: 100%;
   display: flex;
@@ -17,13 +12,8 @@
   object-fit: contain;
 }
 
-<<<<<<< HEAD
-.hero-container > h1 {
-  color: rgb(255, 255, 255);
-=======
 .home-container > h1 {
   color: #fff;
->>>>>>> 53d283d0f21f487506d4f3694d55cfd5c94b0096
   font-size: 100px;
   margin-top: -100px;
 }

@@ -9,7 +9,14 @@ const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 
 
-
+// initialize pusher
+const pusher = new Pusher({
+    appId: "1162234",
+    key: "9fc95fa77ecdd821257a",
+    secret: "a695e432e435446474cc",
+    cluster: "us3",
+    useTLS: true
+});
 
 // const bodyParser = require('body-parser')
 // const Pusher = require('pusher');
@@ -70,6 +77,14 @@ const cors = require("cors");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept'
+    );
+    next();
+});
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
