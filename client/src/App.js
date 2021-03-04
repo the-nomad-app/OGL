@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 import { Home, Campsites, TravelServices, Trails, Login, Register}from './pages';
@@ -141,6 +142,7 @@ class App extends Component {
             <Route path='/login' component={Login} />
             <Route path='/register' component={Register} />
           </Switch>
+          <Footer />
         </Router>
 
         {/* <GoogleMap

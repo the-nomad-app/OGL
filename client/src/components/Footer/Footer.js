@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 // import { Button } from './Button';
 import { Link } from 'react-router-dom';
+// import NomadLogo from '../../NomadLogo.png';
 
 function Footer() {
   return (
@@ -15,38 +16,40 @@ function Footer() {
       <section className='social-media'>
         <div className='social-media-wrap'>
           <div className='footer-logo'>
-            <Link to='/con' className='social-logo'>
-              Contact me @
-            </Link>
+          <Link to='/' className='social-logo'>
+          {/* <img src= { NomadLogo } alt="NOMAD" /> */}
+          {/* console.log("logo") */}
+          {/* <img src="./images/NomadLogo.png" alt="NOMAD"> */}
+          </Link>
           </div>
           <div className='social-icons'>
           {/* eslint-disable-next-line */}
-            <a
+            {/* <a
               className='social-icon-link'
               to='/pages/campsites'
               target='_blank'
               aria-label='Campsites'
             >
               <i className="fab fa-campground" />
-            </a>
+            </a> */}
             {/* eslint-disable-next-line */}
-            <a
+            {/* <a
               className='social-icon-link'
               to='/pages/trails'
               target='_blank'
               aria-label='Trails'
             >
               <i className='fab fa-Hiking' />
-            </a>
+            </a> */}
             {/* eslint-disable-next-line */}
-            <a
+            {/* <a
               className='social-icon-link'
               to='/pages/travelservices'
               target='_blank'
               aria-label='Travel Resources'
             >
               <i className="far fa-toolbox" />
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
