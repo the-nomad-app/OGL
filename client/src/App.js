@@ -138,6 +138,8 @@ class App extends Component {
             <Route path='/trails' render={(props)=> <Trails locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/travelservices' render={(props)=> <TravelServices locations={this.state.locations} center={this.state.center} current_user={this.state.current_user} {...props} /> }/>
             <Route path='/' exact component={Home} />
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Register} />
           </Switch>
         </Router>
 
@@ -304,22 +306,22 @@ class App extends Component {
 //   }
 // }
 
-function App() {
-  return (
-    <>
-     <Router>
-       <Navbar />
-       <Switch>
-         <Route path='/' exact component={Home} />
-         <Route path='/campsites' component={Campsites} />
-         <Route path='/trails' component={Trails} />
-         <Route path='/travelservices' component={TravelServices} />
-         <Route path='/login' component={Login} />
-         <Route path='/register' component={Register} />
-       </Switch>
-     </Router>
-    </>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//      <Router>
+//        <Navbar />
+//        <Switch>
+//          <Route path='/' exact component={Home} />
+//          <Route path='/campsites' component={Campsites} />
+//          <Route path='/trails' component={Trails} />
+//          <Route path='/travelservices' component={TravelServices} />
+//          <Route path='/login' component={Login} />
+//          <Route path='/register' component={Register} />
+//        </Switch>
+//      </Router>
+//     </>
+//   );
+// }
 
 export default App;
