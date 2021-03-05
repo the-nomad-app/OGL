@@ -12,7 +12,7 @@ import {
   Button,
 } from "../components/Login";
 
-export function Register() {
+export default function Register() {
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -79,3 +79,5 @@ export function Register() {
     </Container>
   );
 }
+
+export { Register }
