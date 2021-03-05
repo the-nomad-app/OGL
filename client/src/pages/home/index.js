@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../Login"
+import Register from "../Register"
 import "./home.css"
 
 function Home() {
@@ -20,9 +21,8 @@ function Home() {
         <div>
         {/* style={styles.loginContainer} className='login-container' */}
           <Login />
+          <Register />
         </div>
-
-        
         </div>
       );
     }
