@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import API from "../../utils/geocode";
-
 // import API from "../../../utils/API";
-
 import './travelservices.css';
 import GoogleMap from 'google-map-react';
 // import axios from 'axios';
@@ -29,7 +27,16 @@ const Marker = ({ title }) => (
   </div>
 );
 
+function renderStations () {
+  API.getGas()
+  .then((res) => {
+    console.log("stations: ", res);
+  })
+  .catch((err) => console.log(err));
+}
+
 function TravelServices(props) {
+  renderStations();
   console.log(props)
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
       return (

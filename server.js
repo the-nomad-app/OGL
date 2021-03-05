@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 const Pusher = require('pusher');
-
+// const bodyParser = require('body-parser')
 
 // initialize pusher
 const pusher = new Pusher({
@@ -18,18 +18,6 @@ const pusher = new Pusher({
     cluster: "us3",
     useTLS: true
 });
-
-// const bodyParser = require('body-parser')
-// const Pusher = require('pusher');
-
-// // initialize pusher
-// const pusher = new Pusher({
-//     appId: "1162234",
-//     key: "9fc95fa77ecdd821257a",
-//     secret: "a695e432e435446474cc",
-//     cluster: "us3",
-//     useTLS: true
-// });
 
 // pusher.trigger("my-channel", "my-event", {
 //     message: "hello world"
