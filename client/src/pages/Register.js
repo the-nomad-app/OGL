@@ -48,12 +48,12 @@ export default function Register() {
 
   return (
     <Container className="mt-5">
-      <Row>
+      <Row className="login-row">
         <Column className="col-md-6 offset-md-3">
           <h1 className="mb-4">Register</h1>
           <form onSubmit={_handleSubmit}>
-            <FormGroup>
-              <Label>Email</Label>
+          <FormGroup className="form-group-email">
+              <Label>User Name: </Label>
               <Input
                 type="text"
                 name="username"
@@ -61,8 +61,8 @@ export default function Register() {
                 onChange={_handleChange}
               />
             </FormGroup>
-            <FormGroup>
-              <Label>Password</Label>
+            <FormGroup className="form-group-password">
+              <Label>Password:        </Label>
               <Input
                 type="password"
                 name="password"
@@ -70,8 +70,8 @@ export default function Register() {
                 onChange={_handleChange}
               />
             </FormGroup>
-            <FormGroup className="text-right">
-              <Button className="btn-primary">Register</Button>
+            <FormGroup className="form-group-submit">
+            <Button className="btn">Register</Button>
             </FormGroup>
           </form>
         </Column>
