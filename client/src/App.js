@@ -49,14 +49,14 @@ class App extends Component {
     })
     this.presenceChannel = pusher.subscribe('presence-channel');
 
-    this.presenceChannel.bind('pusher:subscription_succeeded', members => {
-      this.setState({
-        users_online: members.members,
-        current_user: members.myID
-      });
+    // this.presenceChannel.bind('pusher:subscription_succeeded', members => {
+    //   this.setState({
+    //     users_online: members.members,
+    //     current_user: members.myID
+    //   });
       this.getLocation();
       this.notify();
-    })
+    // })
 
     this.presenceChannel.bind('location-update', body => {
       this.setState((prevState, props) => {
@@ -103,14 +103,14 @@ class App extends Component {
           newState.locations[`${prevState.current_user}`] = location;
           return newState;
         });
-        axios.post("http://localhost:3128/update-location", {
-          username: this.state.current_user,
-          location: location
-        }).then(res => {
-          if (res.status === 200) {
-            console.log("new location updated successfully");
-          }
-        });
+        // axios.post("http://localhost:3128/update-location", {
+        //   username: this.state.current_user,
+        //   location: location
+        // }).then(res => {
+        //   if (res.status === 200) {
+        //     console.log("new location updated successfully");
+        //   }
+        // });
       })
     } else {
       alert("Sorry, geolocation is not available on your device. You need that to use this app");
