@@ -101,14 +101,14 @@ class App extends Component {
           newState.locations[`${prevState.current_user}`] = location;
           return newState;
         });
-        axios.post("http://localhost:3128/update-location", {
-          username: this.state.current_user,
-          location: location
-        }).then(res => {
-          if (res.status === 200) {
-            console.log("new location updated successfully");
-          }
-        });
+        // axios.post("http://localhost:3128/update-location", {
+        //   username: this.state.current_user,
+        //   location: location
+        // }).then(res => {
+        //   if (res.status === 200) {
+        //     console.log("new location updated successfully");
+        //   }
+        // });
       })
     } else {
       alert("Sorry, geolocation is not available on your device. You need that to use this app");
