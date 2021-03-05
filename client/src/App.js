@@ -42,7 +42,7 @@ class App extends Component {
 
   componentDidMount() {
     let pusher = new Pusher('9fc95fa77ecdd821257a', {
-      authEndpoint: "http://localhost:3128/pusher/auth",
+      authEndpoint: "http://localhost:3000/pusher/auth",
       cluster: "us3"
     })
     this.presenceChannel = pusher.subscribe('presence-channel');
@@ -101,7 +101,7 @@ class App extends Component {
           newState.locations[`${prevState.current_user}`] = location;
           return newState;
         });
-        // axios.post("http://localhost:3128/update-location", {
+        // axios.post("http://localhost:3000/update-location", {
         //   username: this.state.current_user,
         //   location: location
         // }).then(res => {
