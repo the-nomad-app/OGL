@@ -1,6 +1,7 @@
 import React from "react";
 import './campsites.css';
 import GoogleMap from 'google-map-react';
+import API from "../../utils/geocode";
 // import axios from 'axios';
 // import Pusher from 'pusher-js';
 // import { ToastContainer, toast } from 'react-toastify';
@@ -26,6 +27,11 @@ const mapStyles = {
   );
 
 function Campsites(props) {
+
+  // API.getCampgrounds(props.locations.lat, props.locations.lng)
+  // .then((res) => console.log(res))
+  // .catch((err) => console.log(err));
+
     console.log(props)
     let locationMarkers = Object.keys(props.locations).map((username, id) => {
         return (
