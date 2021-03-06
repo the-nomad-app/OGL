@@ -65,7 +65,7 @@ const pusher = new Pusher({
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:true}));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header(

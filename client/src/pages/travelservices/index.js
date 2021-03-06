@@ -7,6 +7,20 @@ import GoogleMap from "google-map-react";
 // import Pusher from 'pusher-js';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
+// const express = require("express");
+// const app = express();
+// const cors = require("cors");
+
+// app.use(cors());
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header(
+//         'Access-Control-Allow-Headers',
+//         'Origin, X-Requested-With, Content-Type, Accept'
+//     );
+//     next();
+// });
+
 
 const mapStyles = {
   width: "100%",
@@ -37,8 +51,9 @@ function TravelServices(props) {
       console.log("stations: ", res);
     })
     .catch((err) => console.log(err));
+  console.log(props.locations);
 
-  console.log(props);
+  // console.log(props);
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
     return (
       <Marker

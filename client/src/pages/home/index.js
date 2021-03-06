@@ -2,6 +2,7 @@ import React from "react";
 import Login from "../Login"
 import Register from "../Register"
 import "./home.css"
+// import Cards from "../../components/Cards/Cards"
 
 function Home() {
   const backgroundImgs = [ "./images/flatheadLake.jpg", "./images/hotSprings.jpg", "./images/theRonaArch.jpg", "./images/redFleet.jpg", "./images/mermaidPose.jpg", "./images/saltFlats.jpg",  ]
