@@ -32,11 +32,11 @@ const Marker = ({ title }) => (
 );
 
 function TravelServices(props) {
-  // API.getGas()
-  //   .then((res) => {
-  //     console.log("stations: ", res);
-  //   })
-  //   .catch((err) => console.log(err));
+  API.getGas(props.locations.lat, props.locations.lng)
+    .then((res) => {
+      console.log("stations: ", res);
+    })
+    .catch((err) => console.log(err));
 
   console.log(props);
   let locationMarkers = Object.keys(props.locations).map((username, id) => {

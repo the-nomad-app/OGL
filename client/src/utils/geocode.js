@@ -1,4 +1,5 @@
 import axios from "axios";
+require('dotenv').config()
 
 // eslint-disable-next-line
 export default {
@@ -7,9 +8,9 @@ export default {
       "https://geocode.search.hereapi.com/v1/geocode?q=" + search + "&apiKey=ajXCyBIYEY8xiKijsANkbShF3FN2FcIIAQ2jRUKtlyM"
     );
   },
-  getGas: function() {
+  getGas: function(lat, lng) {
     return axios.get(
-      "http://api.amp.active.com/camping/campgrounds?landmarkName=true&landmarkLat=37.84035&landmarkLong=-122.4888889&api_key=s4hjq23y6wxb9aaxsquxn2xs"
+      "http://devapi.mygasfeed.com/stations/radius/" + lat + "/" + lng + "/10/reg/distance/apikey=" + process.env.GAS_KEY + ".json"
     );
   },
   getCampgrounds: function (lat, lng) {
