@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./campsites.css";
 import GoogleMap from "google-map-react";
 import API from "../../utils/geocode";
@@ -19,37 +19,51 @@ const markerStyle = {
 const imgStyle = {
   height: "100%",
 };
-const Marker = ({ title }) => (
+const Marker = ({ name }) => (
   <div style={markerStyle}>
     <img
       style={imgStyle}
       src="https://res.cloudinary.com/og-tech/image/upload/s--OpSJXuvZ--/v1545236805/map-marker_hfipes.png"
-      alt={title}
+      alt={name}
     />
-    <h3>{title}</h3>
+    <h3>{name}</h3>
   </div>
 );
 
 function Campsites(props) {
-  var campgrounds = [];
+  // const [campgrounds, setCampgrounds] = useState([{
+  //   name: "",
+  //   geometry: {
+  //     location: {
+  //       lat: "",
+  //       lng: ""
+  //     }
+  //   },
+  // }])
+  // useEffect(() => {
+  //   const apiData = API.getCampgrounds(props.locations.lat, props.locations.lng)
+  //   console.log("apiData", apiData)
+  //   setCampgrounds (apiData)
+  // }, [])
+  var campgrounds = []
   API.getCampgrounds(props.locations.lat, props.locations.lng)
     .then((res) => {
-      res.data.results.forEach((campground) => {
-        campgrounds.push(campground);
-      });
+        // setCampgrounds(res.data.results);
+        console.log(campgrounds)
     })
     .catch((err) => console.log(err));
-
-    // let campgroundMarkers = Object.keys(campgrounds).map((campground) => {
-    //   return (
-    //     <Marker
-    //       title={campground.title}
-    //       lat={campground.geometry.location.lat}
-    //       lng={campground.geometry.location.lng}
-    //     />
-    //   );
-    // });
-
+    
+    let campgroundMarkers = Object.keys(campgrounds).map((campground) => {
+      console.log(campground)
+      return (
+        <Marker
+          name={campground.name}
+          lat={campground.geometry.location.lat}
+          lng={campground.geometry.location.lng}
+        />
+      );
+    });
+// console.log(campgroundMarkers);
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
     return (
       <Marker
@@ -73,6 +87,7 @@ function Campsites(props) {
       zoom={14}
     >
       {locationMarkers}
+      {/* {campgroundMarkers} */}
     </GoogleMap>
   );
 }
