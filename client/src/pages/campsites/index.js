@@ -28,9 +28,9 @@ const mapStyles = {
 
 function Campsites(props) {
 
-  // API.getCampgrounds(props.locations.lat, props.locations.lng)
-  // .then((res) => console.log(res))
-  // .catch((err) => console.log(err));
+  API.getCampgrounds(props.locations.lat, props.locations.lng)
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
 
     console.log(props)
     let locationMarkers = Object.keys(props.locations).map((username, id) => {

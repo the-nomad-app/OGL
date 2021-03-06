@@ -10,12 +10,12 @@ export default {
   },
   getGas: function(lat, lng) {
     return axios.get(
-      "http://devapi.mygasfeed.com/stations/radius/" + lat + "/" + lng + "/10/reg/distance/apikey=" + process.env.GAS_KEY + ".json"
+      "https://api.mygasfeed.com/stations/radius/" + lat + "/" + lng + "/25/reg/distance/&apikey=9nftz46ixu.json?"
     );
   },
   getCampgrounds: function (lat, lng) {
     return axios.get(
-      "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=campground&inputtype=textquery{PARAMETERS}&locationbias=circle:16000@" + lat + "," + lng + "&key=AIzaSyCpTnhn5_HjpXAv0eDGHXVJAR4qnWaaslw"
+      "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.188490,-112.999300&radius=50000&type=campground&key=AIzaSyCpTnhn5_HjpXAv0eDGHXVJAR4qnWaaslw"
     );
   },
   // Google Places API documentation: https://developers.google.com/maps/documentation/places/web-service/search?hl=en_US
