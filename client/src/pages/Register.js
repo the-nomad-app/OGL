@@ -11,6 +11,7 @@ import {
   Input,
   Button,
 } from "../components/Login";
+import "../pages/home/home.css";
 
 export default function Register() {
   const [state, setState] = useState({
@@ -48,7 +49,7 @@ export default function Register() {
     <Container className="mt-5">
       <Row className="login-row">
         <Column className="col-md-6 offset-md-3">
-          <h1 className="mb-4">Register</h1>
+          <h1 className="mb-4"> </h1>
           <form onSubmit={_handleSubmit}>
           <FormGroup className="form-group-email">
               <Label><i class="fas fa-user"> :</i></Label>
@@ -69,7 +70,7 @@ export default function Register() {
               />
             </FormGroup>
             <FormGroup className="form-group-submit">
-            <Button className="btn">Register</Button>
+            <Button className="btn">REGISTER</Button>
             </FormGroup>
           </form>
         </Column>

@@ -1,12 +1,13 @@
 h1 {
   margin-top: 0;
+  background-color: rgb(28, 27, 27)
 }
 
 .home-container {
   height: 100%;
   width: 100%;
-  margin-top: -50;
-  display: left;
+  padding: 10px;
+  display: center;
   flex-direction: column;
   justify-content: left;
   align-items: left;
@@ -17,13 +18,8 @@ h1 {
 .home-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: -50;
+  margin-top: 0;
   z-index: 0;
-  text-align: center;
-}
-
-.login-row {
-  color: #fff;
   text-align: center;
 }
 
@@ -53,19 +49,6 @@ h1 {
   justify-content: center;
 }
 
-.home-container > p {
-  margin-top: 0px;
-  margin-right: 1px;
-  color: #fff;
-  font-size: 22px;
-  text-align: center;
-  align-content: center;
-  font-family: 'Lato', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Source Sans Pro', sans-serif;
-}
-
 .home-btns {
   margin-top: 0px;
   display: block;
@@ -78,6 +61,7 @@ font-family: 'Source Sans Pro', sans-serif;
 .fa-play-circle {
   margin-left: 4px;
 }
+
 .btn {
   padding: 10px 50px;
   border-radius: 2px;
@@ -96,21 +80,17 @@ font-family: 'Source Sans Pro', sans-serif;
 .btn--outline {
   background-color: transparent;
   color: #fff;
-  padding: 8px 20px;
+  padding: 10px 50px;
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
-}
-
-.btn--medium {
-  padding: 8px 20px;
-  font-size: 18px;
-}
+} */
 
 .btn--large {
-  padding: 12px 26px;
+  padding: 10px 50px;
+  border-radius: 2px;
   font-size: 20px;
 }
-
+ 
 .btn--large:hover,
 .btn--medium:hover {
   transition: all 0.3s ease-out;
@@ -118,6 +98,11 @@ font-family: 'Source Sans Pro', sans-serif;
   color: #242424;
   transition: 250ms;
 } 
+
+.login-row {
+  color: #fff;
+  text-align: center;
+}
 
 @media screen and (max-width: 960px) {
   .home-container > h1 {
@@ -140,12 +125,6 @@ font-family: 'Source Sans Pro', sans-serif;
     display: block;
     text-decoration: none;
   }
-
-  .btn {
-    width: 50%;
-  }
-
-
 }
 
 
