@@ -39,7 +39,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Campsites
+                  <i className="fas fa-campground" />
                 </Link>
               </li>
               <li className='nav-item'>
@@ -48,7 +48,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Trails
+                  <i className="fas fa-hiking" />
                 </Link>
               </li>
               <li className='nav-item'>
@@ -57,7 +57,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Travel Services
+                  <i className="fas fa-gas-pump" />
                 </Link>
               </li>
               <li className='nav-item'>
@@ -66,7 +66,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Login
+                  <i className="fas fa-home" />
                 </Link>
               </li>
             </ul>
