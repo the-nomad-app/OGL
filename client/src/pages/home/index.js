@@ -15,12 +15,12 @@ function Home() {
   //   }
   // }
   return (
-          <div className='home-container'>
-                    {/* style={styles.loginContainer} className='login-container' */}
-          <Login />
-          <Register />
-          <embed type="image/jpg" src= { backgroundImgs[Math.floor (Math.random() * backgroundImgs.length)] } width="100%" height="100%"></embed>
-        </div>
-      );
-    }
+    <div className='home-container'>
+      {/* style={styles.loginContainer} className='login-container' */}
+      <Login />
+      <Register />
+      <embed type="image/jpg" src={backgroundImgs[Math.floor(Math.random() * backgroundImgs.length)]} width="100%" height="100%"></embed>
+    </div>
+  );
+}
 export { Home };
