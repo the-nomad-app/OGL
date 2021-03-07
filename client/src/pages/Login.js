@@ -11,6 +11,7 @@ import {
   Input,
   Button,
 } from "../components/Login";
+import "../pages/home/home.css";
 
 export default function Login() {
   const [state, setState] = useState({
@@ -50,7 +51,7 @@ export default function Login() {
     <Container className="mt-5">
       <Row className="login-row">
         <Column className="col-md-6 offset-md-3">
-          <h1 className="mb-4">Login</h1>
+          <h1 className="mb-4"> </h1>
           <form onSubmit={_handleSubmit}>
             <FormGroup className="form-group-email">
               <Label><i class="fas fa-user"> : </i></Label>
@@ -71,7 +72,7 @@ export default function Login() {
               />
             </FormGroup>
             <FormGroup className="form-group-submit">
-              <Button className="btn">Submit</Button>
+              <Button className="btn">LOGIN</Button>
             </FormGroup>
           </form>
         </Column>
