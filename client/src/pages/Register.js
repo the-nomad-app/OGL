@@ -21,8 +21,6 @@ export default function Register() {
   const { auth, setAuth } = useAuth();
   const history = useHistory();
 
-
-
   function _handleChange(event) {
     const { name, value } = event.target;
     setState({ ...state, [name]: value });
