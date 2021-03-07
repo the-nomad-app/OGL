@@ -53,7 +53,7 @@ export default function Login() {
           <h1 className="mb-4">Login</h1>
           <form onSubmit={_handleSubmit}>
             <FormGroup className="form-group-email">
-              <Label>User Name: </Label>
+              <Label><i class="fas fa-user"> : </i></Label>
               <Input
                 type="text"
                 name="username"
@@ -62,7 +62,7 @@ export default function Login() {
               />
             </FormGroup>
             <FormGroup className="form-group-password">
-              <Label>Password: </Label>
+              <Label><i class="fas fa-sign-in-alt"> : </i></Label>
               <Input
                 type="password"
                 name="password"
