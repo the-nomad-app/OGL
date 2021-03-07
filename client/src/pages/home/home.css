@@ -1,7 +1,10 @@
+h1 {
+  margin-top: 0;
+}
 .home-container {
   height: 100%;
   width: 100%;
-  margin-top: 0;
+  margin-top: -50;
   display: left;
   flex-direction: column;
   justify-content: left;
@@ -13,8 +16,8 @@
 .home-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: 0;
-  z-index: 100;
+  margin-top: -50;
+  z-index: 0;
   text-align: center;
 }
 
@@ -26,7 +29,7 @@
 .form-group-email {
   align-items: flex-start;
   display: block;
-  margin-top: 1px center 0;
+  margin-top: 0px center 0;
   opacity: 1;
   text-align: center;
   justify-content: center;
@@ -34,7 +37,7 @@
 .form-group-password {
   align-items:flex-start;
   display: block;
-  margin-top: 1px center 0;
+  margin-top: 0px center 0;
   opacity: 1;
   text-align: center;
   justify-content: center;
@@ -42,7 +45,7 @@
 .form-group-submit {
   align-items: center;
   display: block;
-  margin-top: 1px center 0;
+  margin-top: 0px center 0;
   padding: 1%;
   opacity: 1;
   text-align: center;
@@ -54,7 +57,7 @@
   margin-right: 1px;
   color: #fff;
   font-size: 22px;
-  text-align: left;
+  text-align: center;
   align-content: center;
   font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
@@ -63,7 +66,7 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 .home-btns {
-  margin-top: 32px;
+  margin-top: 0px;
   display: block;
 }
 
@@ -140,6 +143,8 @@ font-family: 'Source Sans Pro', sans-serif;
   .btn {
     width: 50%;
   }
+
+
 }
 
 
