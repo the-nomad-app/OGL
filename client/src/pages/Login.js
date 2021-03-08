@@ -51,7 +51,7 @@ export default function Login() {
     <Container className="mt-5">
       <Row className="login-row">
         <Column className="col-md-6 offset-md-3">
-          <h1 className="mb-4"> </h1>
+          <h1 className="mb-4">LOGIN</h1>
           <form onSubmit={_handleSubmit}>
             <FormGroup className="form-group-email">
               <Label><i class="fas fa-user"> : </i></Label>
@@ -63,7 +63,7 @@ export default function Login() {
               />
             </FormGroup>
             <FormGroup className="form-group-password">
-              <Label><i class="fas fa-sign-in-alt"> : </i></Label>
+              <Label><i class="fas fa-unlock-alt"> : </i></Label>
               <Input
                 type="password"
                 name="password"
