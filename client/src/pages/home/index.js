@@ -2,19 +2,19 @@ import React from "react";
 import Login from "../Login";
 import Register from "../Register";
 import "./home.css";
-
 // import Cards from "../../components/Cards/Cards"
+
 function Home() {
-  const backgroundImgs = [ "./images/flatheadLake.jpg", "./images/cooleyGrandCanyon.jpg", "./images/cecretLake.jpg", "./images/redFleet.jpg", "./images/mermaidPose.jpg", "./images/saltFlats.jpg", "./images/antelopeIsland.jpg", "./images/arizonaRocks.jpg",  ]
-  // const styles={
-  //   loginContainer: {
-  //     backgroundColor: "red",
-  //     borderColor: "black",
-  //     padding: "10%",
-  //     zIndex: "1000",
-  //     margin: "-20vh auto 0",
-  //   }
-  // }
+  const backgroundImgs = [ 
+    "./images/flatheadLake.jpg", 
+    "./images/cooleyGrandCanyon.jpg", 
+    "./images/cecretLake.jpg", 
+    "./images/redFleet.jpg", 
+    "./images/mermaidPose.jpg", 
+    "./images/saltFlats.jpg", 
+    "./images/antelopeIsland.jpg", 
+    "./images/arizonaRocks.jpg",  ]
+
   return (
     <div className='home-container'>
       {/* style={styles.loginContainer} className='login-container' */}
