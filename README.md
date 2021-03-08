@@ -15,12 +15,14 @@
 
 # How to Use the App
   * Register or Login on the Homescreen 
+  
 ![image](https://user-images.githubusercontent.com/69832533/110275400-2e12ce00-7f8e-11eb-8399-d171c6ec71c3.png)
 
   * Use the 3 Icons to filter on nearby destinations for: 
       * Camping
       * Hiking 
       * Fuel
+      
 ![image](https://user-images.githubusercontent.com/69832533/110275555-8053ef00-7f8e-11eb-9600-f196d9ae2e61.png)
 
 # Live Link
