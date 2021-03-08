@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./campsites.css";
 import GoogleMap from "google-map-react";
 import API from "../../utils/geocode";
@@ -19,66 +19,54 @@ const markerStyle = {
 const imgStyle = {
   height: "100%",
 };
-const Marker = ({ name }) => (
+const Marker = ({ title }) => (
   <div style={markerStyle}>
     <img
       style={imgStyle}
       src="https://res.cloudinary.com/og-tech/image/upload/s--OpSJXuvZ--/v1545236805/map-marker_hfipes.png"
-      alt={name}
+      alt={title}
     />
-    <h3>{name}</h3>
+    <h3>{title}</h3>
   </div>
 );
 
 function Campsites(props) {
-  // const [campgrounds, setCampgrounds] = useState([{
-  //   name: "",
-  //   geometry: {
-  //     location: {
-  //       lat: "",
-  //       lng: ""
-  //     }
-  //   },
-  // }])
-  // useEffect(() => {
-  //   const apiData = API.getCampgrounds(props.locations.lat, props.locations.lng)
-  //   console.log("apiData", apiData)
-  //   setCampgrounds (apiData)
-  // }, [])
-  var campgrounds = []
+  var campgrounds = [];
   API.getCampgrounds(props.locations.lat, props.locations.lng)
     .then((res) => {
-        // setCampgrounds(res.data.results);
-        console.log(campgrounds)
+      res.data.results.forEach((campground) => {
+        campgrounds.push(campground);
+      });
     })
     .catch((err) => console.log(err));
     
-    let campgroundMarkers = Object.keys(campgrounds).map((campground) => {
-      console.log(campground)
+    let campgroundMarkers = Object.keys(campgrounds).map((campground, username, id) => {
       return (
         <Marker
-          name={campground.name}
-          lat={campground.geometry.location.lat}
-          lng={campground.geometry.location.lng}
-        />
-      );
-    });
-// console.log(campgroundMarkers);
-  let locationMarkers = Object.keys(props.locations).map((username, id) => {
-    return (
-      <Marker
         key={id}
-        title={`${
-          username === props.current_user
+        title={campground.name}
+        lat={campground.geometry.location.lat}
+        lng={campground.geometry.location.lng}
+        />
+        );
+      });
+      console.log(campgroundMarkers);
+      let locationMarkers = Object.keys(props.locations).map((username, id) => {
+        return (
+          <Marker
+          key={id}
+          title={`${
+            username === props.current_user
             ? "My location"
             : username + "'s location"
-        }`}
-        lat={props.locations[`${username}`].lat}
-        lng={props.locations[`${username}`].lng}
-      ></Marker>
-    );
-  });
-
+          }`}
+          lat={props.locations[`${username}`].lat}
+          lng={props.locations[`${username}`].lng}
+          ></Marker>
+          );
+        });
+        
+        console.log(campgrounds);
   return (
     <GoogleMap
       style={mapStyles}
@@ -87,7 +75,7 @@ function Campsites(props) {
       zoom={14}
     >
       {locationMarkers}
-      {/* {campgroundMarkers} */}
+      {campgroundMarkers}
     </GoogleMap>
   );
 }
