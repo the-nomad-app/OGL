@@ -31,8 +31,11 @@
 # GitHub Repository
   * https://github.com/the-nomad-app/OGL.git
 
+# Mongo Database
+  * https://cloud.mongodb.com/v2/602385330202ff23493ac51e#clusters
+
 # Contributers
-   * Chance Ewell - 
+   * Chance Ewell - Chance.Shane.Ewell@gmail.com
    * John Dolac - johndolacjr@gamil.com 
    * Tucker Hill - hill1635@gmail.com 
    * Chris Cooley - chriscooley1984@yahoo.com
