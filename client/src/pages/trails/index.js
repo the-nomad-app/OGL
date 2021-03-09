@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './trails.css';
 import GoogleMap from 'google-map-react';
+import API from "../../utils/geocode";
+
 // import axios from 'axios';
 // import Pusher from 'pusher-js';
 // import { ToastContainer, toast } from 'react-toastify';
@@ -38,7 +40,18 @@ const Marker = ({ title }) => (
 );
 
 function Trails(props) {
-  console.log(props)
+  const [hikes, setHikes] = useState([])
+
+  useEffect(() => {
+    API.getHikes(props.locations.lat, props.locations.lng)
+    .then((res) => {
+      setHikes(res.data.results)
+      
+    })
+    .catch((err) => console.log(err));
+    
+  }, [])
+
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
       return (
           <Marker
@@ -51,6 +64,17 @@ function Trails(props) {
       );
   });
 
+  let hikeMarkers = hikes.map((campground) => {
+    return (
+      <Marker
+      key={campground.place_id}
+      title={campground.name}
+      lat={campground.geometry.location.lat}
+      lng={campground.geometry.location.lng}
+      ></Marker>
+      );
+    });
+
 return (
   <GoogleMap
   style={mapStyles}
@@ -59,6 +83,7 @@ return (
   zoom={14}
 >
   {locationMarkers}
+  {hikeMarkers}
 </GoogleMap>
 
 )}    
