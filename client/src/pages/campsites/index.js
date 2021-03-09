@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./campsites.css";
 import GoogleMap from "google-map-react";
 import API from "../../utils/geocode";
@@ -31,40 +31,45 @@ const Marker = ({ title }) => (
 );
 
 function Campsites(props) {
-  var campgrounds = [];
-  API.getCampgrounds(props.locations.lat, props.locations.lng)
+  const [campgrounds, setCampgrounds] = useState([])
+  useEffect(() => {
+    API.getCampgrounds(props.locations.lat, props.locations.lng)
     .then((res) => {
-      res.data.results.forEach((campground) => {
-        campgrounds.push(campground);
-      });
+      setCampgrounds(res.data.results)
+      
     })
     .catch((err) => console.log(err));
     
-    let campgroundMarkers = Object.keys(campgrounds).map((campground, username, id) => {
+  }, [])
+
+  
+    
+    let locationMarkers = Object.keys(props.locations).map((username, id) => {
       return (
         <Marker
         key={id}
+        title={`${
+          username === props.current_user
+          ? "My location"
+          : username + "'s location"
+        }`}
+        lat={props.locations[`${username}`].lat}
+        lng={props.locations[`${username}`].lng}
+        ></Marker>
+        );
+      });
+    let campgroundMarkers = campgrounds.map((campground) => {
+      return (
+        <Marker
+        key={campground.place_id}
         title={campground.name}
         lat={campground.geometry.location.lat}
         lng={campground.geometry.location.lng}
-        />
+        ></Marker>
         );
       });
       console.log(campgroundMarkers);
-      let locationMarkers = Object.keys(props.locations).map((username, id) => {
-        return (
-          <Marker
-          key={id}
-          title={`${
-            username === props.current_user
-            ? "My location"
-            : username + "'s location"
-          }`}
-          lat={props.locations[`${username}`].lat}
-          lng={props.locations[`${username}`].lng}
-          ></Marker>
-          );
-        });
+      
         
         console.log(campgrounds);
   return (
