@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../utils/geocode";
 // import API from "../../../utils/API";
 import "./travelservices.css";
@@ -46,12 +46,18 @@ const Marker = ({ title }) => (
 );
 
 function TravelServices(props) {
-  API.getGas(props.locations.lat, props.locations.lng)
+  const [gasStations, setGasStations] = useState([])
+  // const [coordinates, setCoordinates] = useState({})
+  // setCoordinates({ lat: props.locations.lat, lng: props.locations.lng})
+  useEffect(() => {
+    API.getGas(props.locations.lat, props.locations.lng)
     .then((res) => {
-      console.log("stations: ", res);
+      setGasStations(res.data.results)
+      
     })
     .catch((err) => console.log(err));
-  console.log(props.locations);
+    
+  }, [])
 
   // console.log(props);
   let locationMarkers = Object.keys(props.locations).map((username, id) => {
@@ -69,6 +75,17 @@ function TravelServices(props) {
     );
   });
 
+  let gasMarkers = gasStations.map((station) => {
+    return (
+      <Marker
+      key={station.place_id}
+      title={station.name}
+      lat={station.geometry.location.lat}
+      lng={station.geometry.location.lng}
+      ></Marker>
+      );
+    });
+
   return (
     <GoogleMap
       style={mapStyles}
@@ -77,6 +94,7 @@ function TravelServices(props) {
       zoom={14}
     >
       {locationMarkers}
+      {gasMarkers}
     </GoogleMap>
   );
 }

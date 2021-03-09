@@ -32,6 +32,8 @@ const Marker = ({ title }) => (
 
 function Campsites(props) {
   const [campgrounds, setCampgrounds] = useState([])
+  // const [coordinates, setCoordinates] = useState({})
+  // setCoordinates({ lat: props.locations.lat, lng: props.locations.lng})
   useEffect(() => {
     API.getCampgrounds(props.locations.lat, props.locations.lng)
     .then((res) => {
